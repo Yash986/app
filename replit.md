@@ -18,7 +18,7 @@ A romantic memory timeline website with a greenish nature-inspired theme for cou
 ### Password Protection
 - Secure server-side password verification
 - Session-based authentication that persists for 7 days
-- Default password: "iloveyou" (can be changed via SITE_PASSWORD environment variable)
+- Password configured via SITE_PASSWORD environment variable
 
 ### Design
 - Romantic serif typography (Playfair Display for headlines)
@@ -55,15 +55,16 @@ server/
 ## Configuration
 
 ### Environment Variables
-- `SITE_PASSWORD` - Password to access the site (default: "iloveyou")
+- `SITE_PASSWORD` - Password to access the site
 - `SESSION_SECRET` - Secret for session encryption (auto-generated if not set)
 
 ### Customization
-- Relationship start date: Edit `relationshipStartDate` in `client/src/pages/Home.tsx`
+- Relationship start date: January 3, 2024 (edit `relationshipStartDate` in `client/src/pages/Home.tsx`)
 - Footer quote: Edit the `quote` prop in the Footer component
 - Password hint: Edit the hint text in `PasswordGate.tsx`
 
 ## Recent Changes
+- December 2, 2024: Updated relationship start date to January 3, 2024
 - December 2, 2024: Added password protection with server-side verification
 - December 2, 2024: Added love letters section with full CRUD functionality
 - December 2, 2024: Added bottom navigation between timeline and letters

@@ -25,7 +25,7 @@ const initialMemories: Memory[] = [
     title: "Our First Date",
     description:
       "The day we met at that cozy coffee shop downtown. You were wearing that green dress, and I couldn't stop smiling the entire time. We talked for hours and I knew right then that you were special.",
-    date: new Date("2024-06-15"),
+    date: new Date("2024-01-03"),
     imageUrl:
       "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&auto=format&fit=crop",
   },
@@ -34,7 +34,7 @@ const initialMemories: Memory[] = [
     title: "Beach Sunset",
     description:
       "Walking along the shore as the sun painted the sky in shades of orange and pink. You held my hand and said this was your favorite place. I've never felt more at peace.",
-    date: new Date("2023-08-20"),
+    date: new Date("2024-08-20"),
     imageUrl:
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop",
   },
@@ -43,7 +43,7 @@ const initialMemories: Memory[] = [
     title: "Mountain Adventure",
     description:
       "We conquered that hiking trail together. The view from the top was breathtaking, but nothing compared to seeing your smile when we reached the summit.",
-    date: new Date("2023-10-05"),
+    date: new Date("2024-10-05"),
     imageUrl:
       "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop",
   },
@@ -52,14 +52,14 @@ const initialMemories: Memory[] = [
     title: "Our First Anniversary",
     description:
       "One whole year of adventures, laughter, and love. We celebrated with dinner at that little Italian restaurant where they played our song. Here's to many more years together.",
-    date: new Date("2024-06-15"),
+    date: new Date("2025-01-03"),
     imageUrl:
       "https://images.unsplash.com/photo-1529636798458-92182e662485?w=800&auto=format&fit=crop",
   },
 ];
 
 // todo: remove mock functionality - this date should come from user settings
-const relationshipStartDate = new Date("2023-01-03");
+const relationshipStartDate = new Date("2024-01-03");
 
 export default function Home() {
   const { toast } = useToast();
