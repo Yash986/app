@@ -1,4 +1,6 @@
 import express, { type Request, Response, NextFunction } from "express";
+import session from "express-session";
+import MemoryStore from "memorystore";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
@@ -6,11 +8,34 @@ import { createServer } from "http";
 const app = express();
 const httpServer = createServer(app);
 
+const MemoryStoreSession = MemoryStore(session);
+
 declare module "http" {
   interface IncomingMessage {
     rawBody: unknown;
   }
 }
+
+declare module "express-session" {
+  interface SessionData {
+    isAuthenticated: boolean;
+  }
+}
+
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET || "our-love-story-secret",
+    resave: false,
+    saveUninitialized: false,
+    cookie: { 
+      secure: process.env.NODE_ENV === "production",
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+    },
+    store: new MemoryStoreSession({
+      checkPeriod: 86400000, // prune expired entries every 24h
+    }),
+  })
+);
 
 app.use(
   express.json({

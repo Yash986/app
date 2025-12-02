@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Timeline from "@/components/Timeline";
 import Footer from "@/components/Footer";
 import AddMemoryDialog from "@/components/AddMemoryDialog";
+import Navigation from "@/components/Navigation";
 import type { Memory } from "@/components/MemoryCard";
 import {
   AlertDialog,
@@ -129,7 +130,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pb-24">
       <Header onAddMemory={handleAddMemory} />
 
       <Hero
@@ -151,6 +152,8 @@ export default function Home() {
         startDate={relationshipStartDate}
         quote="In all the world, there is no heart for me like yours."
       />
+
+      <Navigation />
 
       <AddMemoryDialog
         open={dialogOpen}
