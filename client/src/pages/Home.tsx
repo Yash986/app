@@ -50,7 +50,7 @@ const initialMemories: Memory[] = [
 ];
 
 // todo: remove mock functionality - this date should come from user settings
-const relationshipStartDate = new Date("2023-06-15");
+const relationshipStartDate = new Date("2023-01-03");
 
 export default function Home() {
   const { toast } = useToast();
